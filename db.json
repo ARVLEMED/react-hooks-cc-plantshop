@@ -4,7 +4,7 @@
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 21
+      "price": 21.03
     },
     {
       "id": 3,
@@ -25,16 +25,40 @@
       "price": 10.37
     },
     {
-      "name": "banana",
-      "image": "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=eYADMQ9dXTz1mggdfn_exN2gY61aH4fJz1lfMomv6o4=",
-      "price": "45",
-      "id": 9
-    },
-    {
       "name": "Dracaena Marginata Plant",
       "image": "https://www.plantandflowerinfo.com/images/dracaena-marginata-house-plant.jpg",
       "price": 20.7,
       "id": 11
+    },
+    {
+      "name": "Aglaonema Plant",
+      "image": "https://www.plantandflowerinfo.com/images/aglaonema-houseplant-red.jpg",
+      "price": "24",
+      "id": 12
+    },
+    {
+      "name": "Hoya Plant",
+      "image": "https://www.plantandflowerinfo.com/images/hoya-house-plant300x250.jpg",
+      "price": "16.7",
+      "id": 13
+    },
+    {
+      "name": "Dracaena Warneckii Plant",
+      "image": "https://www.plantandflowerinfo.com/images/warneckii-plants.jpg",
+      "price": "14.89",
+      "id": 14
+    },
+    {
+      "name": "Peace Lily Plant",
+      "image": "https://www.plantandflowerinfo.com/images/peace-lily-houseplant.jpg",
+      "price": "12",
+      "id": 15
+    },
+    {
+      "name": "Veronica Spicata",
+      "image": "https://www.southernliving.com/thmb/FQyF7rByQ_4SPzQC4V-wtHJeI1U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/veronica_dark_blue_moody_blues-1-e5e1cbd13b1b451f80809b34e6132f98.jpg",
+      "price": "2.34",
+      "id": 16
     }
   ]
 }

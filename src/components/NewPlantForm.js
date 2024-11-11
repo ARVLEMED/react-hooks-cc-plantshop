@@ -4,6 +4,8 @@ function NewPlantForm({ setPlants }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(""); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,19 +13,36 @@ function NewPlantForm({ setPlants }) {
     const newPlant = { 
       name, 
       image, 
-      price: price.toString() // Convert price to string
+      price: price.toString() 
     };
+
+    setLoading(true);
 
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
-        "Content-Type": "Application/JSON", // Correct header casing
+        "Content-Type": "Application/JSON",
       },
       body: JSON.stringify(newPlant),
     })
       .then((response) => response.json())
       .then((addedPlant) => {
+        setLoading(false); 
         setPlants((prevPlants) => [...prevPlants, addedPlant]);
+
+        setSuccessMessage("Plant added successfully!"); 
+
+        setTimeout(() => {
+          setSuccessMessage(""); 
+        }, 3000); 
+
+        setName("");
+        setImage("");
+        setPrice("");
+      })
+      .catch((error) => {
+        setLoading(false); 
+        console.error("Error adding plant:", error);
       });
   };
 
@@ -55,6 +74,10 @@ function NewPlantForm({ setPlants }) {
         />
         <button type="submit">Add Plant</button>
       </form>
+
+      {loading && <p>Loading...</p>}
+
+      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 }

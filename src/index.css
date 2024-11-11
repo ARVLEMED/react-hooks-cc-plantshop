@@ -122,6 +122,13 @@ input:focus {
   background-color: var(--green);
   margin: 2px;
 }
+.plant-image {
+  width: 150px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  border-radius: 8px; /* Optional: to make the images rounded or have smoother corners */
+}
+
 
 @media (min-width: 768px) {
   .cards {
